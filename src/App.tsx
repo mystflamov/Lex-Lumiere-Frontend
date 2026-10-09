@@ -12,6 +12,7 @@ import { ErrorBoundary } from '@/components/ErrorBoundary'
 import { loadRosterFromDatabase } from '@/lib/roster'
 import { PlannerProvider } from '@/lib/planner'
 import { WarehouseProvider } from '@/lib/warehouse'
+import { GroundCrewLoginPage } from '@/pages/GroundCrewLoginPage'
 
 // Code-split page components for minimal initial bundle latency
 const LoginPage = lazy(() => import('@/pages/LoginPage').then((m) => ({ default: m.LoginPage })))
@@ -41,7 +42,6 @@ const DispatchManifestPage = lazy(() => import('@/pages/DispatchManifestPage').t
 const EventDetailPage = lazy(() => import('@/pages/EventDetailPage').then((m) => ({ default: m.EventDetailPage })))
 const DesignCanvasHubPage = lazy(() => import('@/pages/DesignCanvasHubPage').then((m) => ({ default: m.DesignCanvasHubPage })))
 const CanvasWorkspacePage = lazy(() => import('@/pages/CanvasWorkspacePage').then((m) => ({ default: m.CanvasWorkspacePage })))
-const GroundCrewLoginPage = lazy(() => import('@/pages/GroundCrewLoginPage').then((m) => ({ default: m.GroundCrewLoginPage })))
 const WarehouseLeadPage = lazy(() => import('@/pages/WarehouseLeadPage').then((m) => ({ default: m.WarehouseLeadPage })))
 const WarehouseMemberPage = lazy(() => import('@/pages/WarehouseMemberPage').then((m) => ({ default: m.WarehouseMemberPage })))
 const ManningPage = lazy(() => import('@/pages/ManningPage').then((m) => ({ default: m.ManningPage })))
