@@ -445,7 +445,9 @@ export function HavaCameraCaptureModal({
           )}
 
           {/* Action Buttons */}
-          <div className="flex items-center gap-2">
+          <div className="flex flex-col gap-2">
+            {cameraState !== 'preview' && <button type="button" onClick={() => fileInputRef.current?.click()} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 text-sm font-bold text-primary-foreground shadow-lg transition hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"><Camera className="size-5" aria-hidden="true" />Take Photo</button>}
+            <div className="flex items-center gap-2">
             {cameraState === 'ready' && (
               <button
                 type="button"
@@ -487,6 +489,7 @@ export function HavaCameraCaptureModal({
                 Cancel
               </button>
             )}
+            </div>
           </div>
         </div>
       </div>
